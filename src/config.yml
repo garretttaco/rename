@@ -1,0 +1,22 @@
+name: rename
+version: "1.0"
+author: Garrett Tacoronte <garretttacoronte@gmail.com>
+about: Renames files in directory for specific patterns.
+args:
+    - text:
+        short: t
+        long: text
+        takes_value: true
+        required: true
+        help: Text to replace in filename
+    - with:
+        short: w
+        long: with
+        takes_value: true
+        required: true
+        help: Replace text with in filename
+    - prepend:
+        short: p
+        long: prepend
+        takes_value: true
+        help: Prepend to filename
