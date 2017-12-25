@@ -16,8 +16,8 @@ fn main() {
     for path in paths {
         let file_name: String = get_file_name(path.unwrap());
         let replaced_name : String = str::replace(&file_name, text, replace);
-        let updated_name : String = prepend.to_string() + &replaced_name.to_string();
-        fs::rename(file_name, &updated_name);
+        let updated_name = format!("{}{}", prepend, replaced_name);
+        fs::rename(&file_name, &updated_name);
         println!("Old name: {}, New name: {}", file_name, updated_name);
     }
 }
